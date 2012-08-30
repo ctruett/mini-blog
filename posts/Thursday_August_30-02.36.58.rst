@@ -1,0 +1,1 @@
+So I found out that Kimbra, this new artist that I found, is a Christian! It's so freaking cool. I really enjoy her music, and to see the substance of one of her blog posts was so encouraging. It brought so much joy to me! Wow. Thank you, Father! Bless her music!
