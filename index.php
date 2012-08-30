@@ -33,8 +33,12 @@ foreach($files as $file) {
     \ str_replace("posts/", "", 
     \ str_replace(":rst", "", 
     \ str_replace("-", " @ ", 
+    \ str_replace(":AM"," am", 
+    \ str_replace(":PM"," pm", 
     \ str_replace(".",":", 
     \ str_replace("_", " ", $file)
+    )
+    )
     )
     )
     )
