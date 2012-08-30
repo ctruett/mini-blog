@@ -27,6 +27,8 @@ function array_random($arr, $num = 1) {
 }
 $files = glob('posts/*.rst');
 
+rsort($files);
+
 foreach($files as $file) {
   echo "<b>" . 
     \ preg_replace("/^\w+/", "\\0,", 
