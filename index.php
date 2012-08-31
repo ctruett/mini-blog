@@ -7,10 +7,17 @@
         background: #fff;
         margin: 20px 20px;
         width: 400px;
-        line-height:1;
+        line-height:1.4;
+        font-size: 12px;
+        font-family: sans-serif;
       }
-      body * {
-       /* text-align: justify; */
+      hr {
+        border-width: 0 0 1px;
+        border-style: dashed;
+        border-color: #d0d0d0;
+        height: 0;
+        padding: 0;
+        margin: 3em 0em;
       }
     </style>
   </head>
