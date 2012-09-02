@@ -11,6 +11,9 @@
         font-size: 14px;
         font-family: 'Georgia', serif;
       }
+      b {
+        font-family: 'Arial', sans-serif;
+      }
       hr {
         border-width: 0 0 1px;
         border-style: dashed;
