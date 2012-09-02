@@ -5,10 +5,10 @@
     <style type="text/css">
       body {
         background: #fff;
-        margin: 20px 20px;
-        width: 400px;
-        line-height:22px;
-        font-size: 14px;
+        margin: 20px 28px;
+        width: 600px;
+        line-height:32px;
+        font-size: 20px;
         font-family: 'Georgia', serif;
       }
       b {
