@@ -7,9 +7,9 @@
         background: #fff;
         margin: 20px 20px;
         width: 400px;
-        line-height:1.4;
-        font-size: 12px;
-        font-family: sans-serif;
+        line-height:22px;
+        font-size: 14px;
+        font-family: 'Georgia', serif;
       }
       hr {
         border-width: 0 0 1px;
@@ -32,9 +32,9 @@ function array_random($arr, $num = 1) {
   }
   return $num == 1 ? $r[0] : $r;
 }
-$files = glob('posts/*.rst');
 
-rsort($files);
+$files = glob('posts/*.rst');
+usort($files, create_function('$a,$b', 'return filemtime($b) - filemtime($a);'));
 
 foreach($files as $file) {
   echo "<b>" . 
@@ -46,13 +46,13 @@ foreach($files as $file) {
     \ str_replace(":PM"," pm", 
     \ str_replace(".",":", 
     \ str_replace("_", " ", $file)
+  )
+)
     )
+  )
+)
     )
-    )
-    )
-    )
-    )
-    ) . "</b>";
+  ) . "</b>";
   $html = shell_exec("rst2html2 $file");
   $typo = new phpTypography();
   $html = $typo->process($html);
