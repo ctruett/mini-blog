@@ -5,11 +5,14 @@
     <style type="text/css">
       body {
         background: #fff;
-        margin: 20px 28px;
-        width: 600px;
-        line-height:32px;
-        font-size: 20px;
+        margin: 28px auto;
+        width: 40em;
+        /* line-height:32px; */
+        /* font-size: 20px; */
+        line-height:28px;
+        font-size: 18px;
         font-family: 'Georgia', serif;
+        text-align: justify;
       }
       b {
         font-family: 'Arial', sans-serif;
