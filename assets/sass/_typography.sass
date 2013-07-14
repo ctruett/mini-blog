@@ -1,0 +1,64 @@
+//-------------------------------- imports
+@import url(http://fonts.googleapis.com/css?family=Cousine:400,700)
+
+//-------------------------------- general
+body
+  color: #333
+  font-weight: 400
+  text-rendering: optimizeLegibility
+
+h1, h2, h3
+  // margin: 1.4rem 0
+  font-size: 1rem
+
+//-------------------------------- tables
+// table
+//   width: 100%
+//   tr
+//     th
+//       font-weight: bold
+//       border-bottom: 1px solid
+//     td
+//       border-bottom: 1px dotted
+//     td, th
+//       text-align: left
+//       &:last-child
+//         text-align: right
+
+address
+  font-style: normal
+
+ul, ol
+  padding-left: 1.4rem * 1.4
+
+blockquote
+  margin: 1.4rem 1.4rem * 1.4
+  font-style: italic
+
+hr
+  max-height: 1px
+  height: 1px
+  border: 0
+  border-top: 1px dashed
+  margin: 1.4rem 0
+
+//-------------------------------- code blocks
+code
+  padding: 0.25em 0.5em
+  font-size: 75%
+  font-family: 'Cousine'
+  background: rgba(#ffcc00, 0.1)
+
+pre code
+  padding: 0 1.4rem
+  line-height: 1.6
+  background: none
+
+//-------------------------------- text selection
+::-moz-selection
+  text-shadow: none
+  background: #eee
+
+::selection
+  text-shadow: none
+  background: #eee

@@ -1,3 +1,0 @@
-#!/bin/bash
-
-vim ~/Web/blog/posts/`date +%A_%B_%d-%-I.%M.%S.%p`.rst

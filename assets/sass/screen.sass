@@ -1,0 +1,46 @@
+//-------------------------------- normalize
+@import "normalize"
+
+//-------------------------------- CSS3 support
+$experimental-support-for-microsoft: true
+$experimental-support-for-mozilla: true
+$experimental-support-for-webkit: true
+
+//-------------------------------- typography
+@import "compass/typography/vertical_rhythm"
+
+//-------------------------------- bourbon
+@import "bourbon/bourbon"
+
+//-------------------------------- variables
+$max-width: em(500)
+
+$base-font-size: 18px
+$base-line-height: 1.4 * $base-font-size
+$g: golden-ratio($base-font-size, 1)
+
+@include establish-baseline
+
+//-------------------------------- final imports
+@import "typography"
+@import "colors"
+
+//-------------------------------- styles
+body
+  max-width: $max-width
+  margin: 0 auto
+  padding: 0 $g $g
+
+.grid-parent
+  display: table
+
+.grid
+  padding: 0 $g
+  display: table-cell
+  border-bottom: $g solid transparent
+
+  & > :first-child
+    margin-top: 0
+
+  & > :last-child
+    margin-bottom: 0
