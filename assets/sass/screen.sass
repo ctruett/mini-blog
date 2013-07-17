@@ -13,11 +13,11 @@ $experimental-support-for-webkit: true
 @import "bourbon/bourbon"
 
 //-------------------------------- variables
-$max-width: em(500)
+$max-width: em(520)
 
-$base-font-size: 18px
-$base-line-height: 1.4 * $base-font-size
-$g: golden-ratio($base-font-size, 1)
+$base-font-size: 13px
+$base-line-height: 1.45 * $base-font-size
+$g: 1.45rem
 
 @include establish-baseline
 
@@ -26,11 +26,6 @@ $g: golden-ratio($base-font-size, 1)
 @import "colors"
 
 //-------------------------------- styles
-body
-  max-width: $max-width
-  margin: 0 auto
-  padding: 0 $g $g
-
 .grid-parent
   display: table
 
@@ -38,9 +33,35 @@ body
   padding: 0 $g
   display: table-cell
   border-bottom: $g solid transparent
+  vertical-align: top
 
   & > :first-child
     margin-top: 0
 
   & > :last-child
     margin-bottom: 0
+
+body
+  margin: $g*2 auto $g*2
+  position: relative
+  @extend .grid-parent
+
+.post
+  counter-reset: headings 0
+  img
+    width: 100%
+    max-width: $max-width
+  &:first-child h1
+    margin-top: 0
+
+header, article, aside
+  @extend .grid
+  width: percentage(1/3)
+
+header, aside
+  padding: $g*2 $g*1.45
+  position: relative
+  div
+    position: absolute
+    span
+      position: fixed 
