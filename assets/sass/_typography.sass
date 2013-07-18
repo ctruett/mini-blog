@@ -1,12 +1,15 @@
 //-------------------------------- imports
-@import url(http://fonts.googleapis.com/css?family=Cousine:400,700)
+@import url(http://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,,300italic,700,700italic)
 
 //-------------------------------- general
+em
+  font-size: 110%
+
 body
   color: #333
-  font-weight: 400
+  font-weight: 300
   text-rendering: optimizeLegibility
-  font-family: 'Cousine', monospace
+  font-family: 'Averia Serif Libre', 'Georgia',  serif
 
 h1, h2, h3
   font-size: 1rem
@@ -15,15 +18,20 @@ h1, h2, h3
 
 h1
   margin-bottom: $g
+  // text-align: center
+  display: block
   text-align: center
+  opacity: 0.25
+  & + h2
+    margin-top: 0
 
 h2
   text-transform: capitalize
-  margin-top: $g*2
+  margin-top: $g
   margin-bottom: $g/2
-  counter-increment: headings 1
+  // counter-increment: headings 1
   &:before
-    content: counter(headings, upper-roman) ". "
+    // content: counter(headings, upper-roman) ". "
 
 h3
   margin-bottom: 0
@@ -87,8 +95,8 @@ hr
   max-height: 1px
   height: 1px
   border: 0
-  border-top: 1px dashed
-  margin: $g*3 auto $g*2
+  border-top: 1px dashed #ccc
+  margin: $g*2 auto $g*2
   width: 20%
 
 //-------------------------------- code blocks
@@ -96,6 +104,7 @@ code
   padding: 0.25em 0.5em
   font-family: 'Cousine'
   background: rgba(#ffcc00, 0.1)
+  font-size: 89%
 
 pre
   margin: 0 auto

@@ -32,16 +32,18 @@
 
 	 // Check whether to use HTTPS and set the callback URL
 	 $protocol = (!empty($_SERVER['HTTPS'])) ? 'https' : 'http';
-	 $callback = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+	 // $callback = $protocol . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+	 $callback = $protocol . '://' . $_SERVER['HTTP_HOST']."/update.php";
 
 	 // Instantiate the Encrypter and storage objects
-	 $encrypter = new \Dropbox\OAuth\Storage\Encrypter('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+	 $encrypter = new \Dropbox\OAuth\Storage\Encrypter('ab37298c7293df73273491f627dd8c73');
 
 	 // User ID assigned by your auth system (used by persistent storage handlers)
 	 $userID = 1;
 
 	 // Create the storage object, passing it the Encrypter object
 	 $storage = new \Dropbox\OAuth\Storage\Session($encrypter);
+
 
 	 // Create the consumer and API objects
 	 $OAuth = new \Dropbox\OAuth\Consumer\Curl($key, $secret, $storage, $callback);

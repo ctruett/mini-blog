@@ -15,7 +15,7 @@ $experimental-support-for-webkit: true
 //-------------------------------- variables
 $max-width: em(520)
 
-$base-font-size: 13px
+$base-font-size: 14px
 $base-line-height: 1.45 * $base-font-size
 $g: 1.45rem
 
@@ -48,11 +48,17 @@ body
 
 .post
   counter-reset: headings 0
+  // text-shadow: 0 0 1px transparent
+  position: relative
+  padding-top: $g
+  margin-bottom: $g*4
   img
     width: 100%
     max-width: $max-width
-  &:first-child h1
-    margin-top: 0
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.25)
+    border-radius: 3px
+  &:first-child h2:first-child
+    margin-top: $g/2
 
 header, article, aside
   @extend .grid
@@ -65,3 +71,9 @@ header, aside
     position: absolute
     span
       position: fixed 
+      color: #ccc
+
+article
+  &.update
+    text-align: center
+

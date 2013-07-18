@@ -5,7 +5,7 @@
       <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />
 
       <!-- Page info -->
-      <title>Featherweight Journal</title>
+      <title>Featherweight</title>
       <meta charset='UTF-8'/>
 
       <!-- Styles -->

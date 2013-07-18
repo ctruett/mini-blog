@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Cousine:400,700);
+@import url(http://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,,300italic,700,700italic);
 /*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
@@ -171,19 +171,23 @@ table {
 }
 
 * html {
-  font-size: 81.25%;
+  font-size: 87.5%;
 }
 
 html {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.45em;
+}
+
+em {
+  font-size: 110%;
 }
 
 body {
   color: #333333;
-  font-weight: 400;
+  font-weight: 300;
   text-rendering: optimizeLegibility;
-  font-family: "Cousine", monospace;
+  font-family: "Averia Serif Libre", "Georgia", serif;
 }
 
 h1, h2, h3 {
@@ -194,17 +198,18 @@ h1, h2, h3 {
 
 h1 {
   margin-bottom: 1.45rem;
+  display: block;
   text-align: center;
+  opacity: 0.25;
+}
+h1 + h2 {
+  margin-top: 0;
 }
 
 h2 {
   text-transform: capitalize;
-  margin-top: 2.9rem;
+  margin-top: 1.45rem;
   margin-bottom: 0.725rem;
-  counter-increment: headings 1;
-}
-h2:before {
-  content: counter(headings,upper-roman) ". ";
 }
 
 h3 {
@@ -268,8 +273,8 @@ hr {
   max-height: 1px;
   height: 1px;
   border: 0;
-  border-top: 1px dashed;
-  margin: 4.35rem auto 2.9rem;
+  border-top: 1px dashed #cccccc;
+  margin: 2.9rem auto 2.9rem;
   width: 20%;
 }
 
@@ -277,6 +282,7 @@ code {
   padding: 0.25em 0.5em;
   font-family: "Cousine";
   background: rgba(255, 204, 0, 0.1);
+  font-size: 89%;
 }
 
 pre {
@@ -322,13 +328,18 @@ body {
 
 .post {
   counter-reset: headings 0;
+  position: relative;
+  padding-top: 1.45rem;
+  margin-bottom: 5.8rem;
 }
 .post img {
   width: 100%;
   max-width: 32.5em;
+  box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
 }
-.post:first-child h1 {
-  margin-top: 0;
+.post:first-child h2:first-child {
+  margin-top: 0.725rem;
 }
 
 header, article, aside {
@@ -344,4 +355,9 @@ header div, aside div {
 }
 header div span, aside div span {
   position: fixed;
+  color: #cccccc;
+}
+
+article.update {
+  text-align: center;
 }

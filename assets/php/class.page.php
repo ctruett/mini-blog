@@ -21,11 +21,9 @@
 							 $obj->type = 'image';
 							 $obj->imgpath = str_replace('./','',$file);
 							 $cleanfile = str_replace('./posts/','',$file);
-							 list($mo,$d,$u,$y,$at,$t) = explode('_', $cleanfile);
-							 $h = substr($t, 0, 2); // Hour
-							 $m = substr($t, 2, 2); // Minute
-							 $A = substr($t, 4, 2); // AM / PM
-							 $obj->pid = date('YmdHi', strtotime("$mo $d $y $h:$m $A"));
+							 $date = str_replace(':','.', str_replace(' ','.', exif_read_data($file)['DateTimeOriginal']));
+							 list($y,$mo,$d,$h,$m,$s) = explode('.', $date);
+							 $obj->pid = $y.$mo.$d.$h.$m;
 							 $obj->content = "<img src='image.php?width=438&image=/$obj->imgpath' />";
 						} else {
 							 $obj->type = 'text';
@@ -34,7 +32,6 @@
 							 $obj->content = Markdown($this->unicode_escape_sequences(file_get_contents($file)));
 						}
 						$obj->date = array(date('Y', strtotime($obj->pid)), date('F', strtotime($obj->pid)), date('jS', strtotime($obj->pid)), date('h:i a', strtotime($obj->pid)));
-						$obj->formatted_date = date('l, F j, Y', strtotime($obj->pid)) . " at " . date('h:i a', strtotime($obj->pid));
 						$obj->year = $obj->date[0];
 						$obj->month = $obj->date[1];
 						$obj->day = $obj->date[2];

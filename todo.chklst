@@ -1,6 +1,8 @@
 
 + TODO
-  * Remove Cousine font from stylesheets
+  × 07.18.2013 at 03:57 PM : Redirect back to main page after Dropbox authentication
+  × 07.17.2013 at 01:06 AM : Change title to a light grey so it is not distracting
+  × 07.17.2013 at 01:06 AM : Hide php notices
+  × 07.17.2013 at 12:21 AM : Pull in photos somehow
   × 07.17.2013 at 12:21 AM : Remove annoying fancy aesthetic and get back to something minimal
   × 07.17.2013 at 12:21 AM : Use a fixed width font, instead of the stupid serif
-  × 07.17.2013 at 12:21 AM : Pull in photos somehow
