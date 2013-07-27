@@ -1,37 +1,65 @@
 //-------------------------------- imports
-@import url(http://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,,300italic,700,700italic)
+$hairline: "HelveticaNeueLT Com 35 Th", Helvetica, Arial, sans-serif
+$thin: "HelveticaNeueLT Com 45 Lt", Helvetica, Arial, sans-serif
+$regular: "Helvetica Neue", Helvetica, Arial, sans-serif
 
 //-------------------------------- general
 em
   font-size: 110%
 
 body
-  color: #333
-  font-weight: 300
-  text-rendering: optimizeLegibility
-  font-family: 'Averia Serif Libre', 'Georgia',  serif
+  background: #fdfdfd
+  font-weight: normal
+  text-rendering: optimize-legibility
+  font-family: $regular
+  color: $copy
 
 h1, h2, h3
   font-size: 1rem
   line-height: 1.45
   margin: $g 0
+  font-family: $thin
+  font-weight: bold
+  color: darken($grey, 10%)
 
-h1
-  margin-bottom: $g
-  // text-align: center
+h1.date
+  margin: 0
   display: block
-  text-align: center
-  opacity: 0.25
+  position: absolute
+  left: -17.45em
+  width: 15em
+  margin-top: -1.5em
+  text-align: right
+  top: 0
+  font-family: $thin
+  font-weight: normal
+  color: darken($grey, 10%)
+  span
+    font-family: $hairline
+    font-size: 2.9em
+    display: block
+    position: relative
+    margin-bottom: 0.28em
   & + h2
     margin-top: 0
 
-h2
-  text-transform: capitalize
-  margin-top: $g
+h1.date + h2
+  font-size: 1.45rem * 2
   margin-bottom: $g/2
-  // counter-increment: headings 1
-  &:before
-    // content: counter(headings, upper-roman) ". "
+  margin-top: 0
+  letter-spacing: -1px
+  font-weight: normal
+  text-shadow: 0 0 1px transparent
+  @media #{$iphone}
+    font-size: 2rem
+    letter-spacing: -0.5px
+
+h2
+  font-size: 1.2rem
+  margin-top: $g*2
+  margin-bottom: $g/2
+  font-weight: normal
+  font-family: $regular
 
 h3
   margin-bottom: 0
@@ -42,12 +70,6 @@ p
   margin: 0
   & + p
     text-indent: $g
-
-b, strong
-  font-size: 95%
-
-img
-  max-width: $max-width
 
 //-------------------------------- tables
 // table
@@ -67,7 +89,7 @@ address
   font-style: normal
 
 .post > ul, .post > ol
-  padding: 0
+  padding-left: $g
 
 ul, ol
   text-align: justify
@@ -116,8 +138,8 @@ pre code
 //-------------------------------- text selection
 ::-moz-selection
   text-shadow: none
-  background: #eee8d5
+  background: #f0f0f0
 
 ::selection
   text-shadow: none
-  background: #eee8d5
+  background: #f0f0f0

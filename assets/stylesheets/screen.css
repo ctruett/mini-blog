@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,,300italic,700,700italic);
 /*! normalize.css v2.1.1 | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block;
@@ -176,7 +175,7 @@ table {
 
 html {
   font-size: 14px;
-  line-height: 1.45em;
+  line-height: 1.7em;
 }
 
 em {
@@ -184,32 +183,67 @@ em {
 }
 
 body {
-  color: #333333;
-  font-weight: 300;
-  text-rendering: optimizeLegibility;
-  font-family: "Averia Serif Libre", "Georgia", serif;
+  background: #fdfdfd;
+  font-weight: normal;
+  text-rendering: optimize-legibility;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #666666;
 }
 
 h1, h2, h3 {
   font-size: 1rem;
   line-height: 1.45;
   margin: 1.45rem 0;
+  font-family: "HelveticaNeueLT Com 45 Lt", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #384045;
 }
 
-h1 {
-  margin-bottom: 1.45rem;
+h1.date {
+  margin: 0;
   display: block;
-  text-align: center;
-  opacity: 0.25;
+  position: absolute;
+  left: -17.45em;
+  width: 15em;
+  margin-top: -1.5em;
+  text-align: right;
+  top: 0;
+  font-family: "HelveticaNeueLT Com 45 Lt", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #384045;
 }
-h1 + h2 {
+h1.date span {
+  font-family: "HelveticaNeueLT Com 35 Th", Helvetica, Arial, sans-serif;
+  font-size: 2.9em;
+  display: block;
+  position: relative;
+  margin-bottom: 0.28em;
+}
+h1.date + h2 {
   margin-top: 0;
 }
 
-h2 {
-  text-transform: capitalize;
-  margin-top: 1.45rem;
+h1.date + h2 {
+  font-size: 2.9rem;
   margin-bottom: 0.725rem;
+  margin-top: 0;
+  letter-spacing: -1px;
+  font-weight: normal;
+  text-shadow: 0 0 1px transparent;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  h1.date + h2 {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+  }
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 2.9rem;
+  margin-bottom: 0.725rem;
+  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h3 {
@@ -225,20 +259,12 @@ p + p {
   text-indent: 1.45rem;
 }
 
-b, strong {
-  font-size: 95%;
-}
-
-img {
-  max-width: 32.5em;
-}
-
 address {
   font-style: normal;
 }
 
 .post > ul, .post > ol {
-  padding: 0;
+  padding-left: 1.45rem;
 }
 
 ul, ol {
@@ -296,68 +322,143 @@ pre code {
 
 ::-moz-selection {
   text-shadow: none;
-  background: #eee8d5;
+  background: #f0f0f0;
 }
 
 ::selection {
   text-shadow: none;
-  background: #eee8d5;
+  background: #f0f0f0;
 }
 
-.grid-parent, body {
+* {
+  box-sizing: border-box;
+}
+
+.grid-parent {
   display: table;
+  width: 100%;
+  max-width: 680px;
 }
 
-.grid, header, article, aside {
+.grid {
   padding: 0 1.45rem;
   display: table-cell;
   border-bottom: 1.45rem solid transparent;
   vertical-align: top;
 }
-.grid > :first-child, header > :first-child, article > :first-child, aside > :first-child {
+.grid > :first-child {
   margin-top: 0;
 }
-.grid > :last-child, header > :last-child, article > :last-child, aside > :last-child {
+.grid > :last-child {
   margin-bottom: 0;
 }
 
-body {
-  margin: 2.9rem auto 2.9rem;
+section {
+  margin: 0 auto;
+  width: 29.125em;
   position: relative;
+  top: 10.75rem;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  section {
+    margin: 0 auto;
+    width: 100%;
+    top: 0;
+  }
 }
 
 .post {
   counter-reset: headings 0;
+  text-shadow: 0 0 1px transparent;
   position: relative;
-  padding-top: 1.45rem;
-  margin-bottom: 5.8rem;
+  margin-bottom: 3.1175rem;
+  padding-bottom: 3.625rem;
+  letter-spacing: 1px;
+  word-spacing: -2px;
+  color: #4f5b62;
+  text-shadow: 0 0 1px rgba(79, 91, 98, 0.05);
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .post {
+    margin-bottom: 2.9rem;
+  }
 }
 .post img {
   width: 100%;
-  max-width: 32.5em;
   box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
+  border-radius: 5px;
+  margin-top: 0.7975rem;
 }
 .post:first-child h2:first-child {
-  margin-top: 0.725rem;
+  margin-top: 0;
 }
 
-header, article, aside {
-  width: 33.33333%;
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  article {
+    width: 100%;
+    padding: 1.45rem;
+  }
 }
 
-header, aside {
-  padding: 2.9rem 2.1025rem;
+header {
+  width: 100%;
   position: relative;
-}
-header div, aside div {
-  position: absolute;
-}
-header div span, aside div span {
+  z-index: 100;
+  height: 8.7rem;
+  background-color: rgba(253, 253, 253, 0.95);
+  background-repeat: all;
+  border-bottom: 1px solid rgba(240, 243, 247, 0.3);
   position: fixed;
-  color: #cccccc;
+  padding: 1.45rem 0;
 }
-
-article.update {
-  text-align: center;
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  header {
+    padding: 0.725rem 1.45rem;
+    position: relative;
+    height: 4.7125rem;
+  }
+}
+header div {
+  width: 29.125em;
+  margin: 0 auto;
+  position: relative;
+  top: 1.45rem;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  header div {
+    width: 100%;
+    top: 0.725rem;
+  }
+}
+header h2 {
+  display: inline-block;
+  font-weight: normal;
+  margin: 0;
+  position: relative;
+  top: -0.8em;
+  left: 1.45rem;
+  color: #384045;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  header h2 {
+    left: 0;
+    top: 0;
+  }
+}
+header h2 span {
+  font-weight: normal;
+  color: #9ba7ae;
+  font-family: "HelveticaNeueLT Com 45 Lt", Helvetica, Arial, sans-serif;
+}
+header img {
+  border-radius: 8px;
+  width: 40px;
+  display: inline-block;
+  border: 2px solid white;
+  box-shadow: 0 0 3px rgba(170, 170, 170, 0.5);
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  header img {
+    display: none;
+  }
 }

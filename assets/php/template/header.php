@@ -15,9 +15,10 @@
       <!-- Scripts -->
       <script src='//code.jquery.com/jquery-2.0.3.min.js' type='text/javascript'></script>
       <script src='assets/js/widowtamer.js' type='text/javascript'></script>
-      <script src='assets/js/hyphenator.js' type='text/javascript'></script>
+			<script src='assets/js/hypher.js' type='text/javascript'></script>
+			<script src='assets/js/hypher-patterns.js' type='text/javascript'></script>
       <script src='assets/js/prefixfree.js' type='text/javascript'></script>
-      <!-- <script src='assets/js/functions.js' type='text/javascript'></script> -->
+      <script src='assets/js/functions.js' type='text/javascript'></script>
 
       <!-- Highlight.js -->
       <link rel="stylesheet" href="assets/inc/highlight.js/vs.min.css">
@@ -33,4 +34,3 @@
       <![endif]-->
    </head>
    <body>
-      <header>&nbsp;</header>

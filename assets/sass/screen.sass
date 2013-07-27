@@ -13,21 +13,29 @@ $experimental-support-for-webkit: true
 @import "bourbon/bourbon"
 
 //-------------------------------- variables
-$max-width: em(520)
+$max-width: em(438)
 
 $base-font-size: 14px
-$base-line-height: 1.45 * $base-font-size
+$base-line-height: 1.7 * $base-font-size
 $g: 1.45rem
 
 @include establish-baseline
 
+//-------------------------------- media sizes
+$iphone: "only screen and (min-device-width : 320px) and (max-device-width : 480px)"
+
 //-------------------------------- final imports
-@import "typography"
 @import "colors"
+@import "typography"
 
 //-------------------------------- styles
+*
+  box-sizing: border-box
+
 .grid-parent
   display: table
+  width: 100%
+  max-width: 680px
 
 .grid
   padding: 0 $g
@@ -41,39 +49,84 @@ $g: 1.45rem
   & > :last-child
     margin-bottom: 0
 
-body
-  margin: $g*2 auto $g*2
+section
+  margin: 0 auto
+  width: em(466)
   position: relative
-  @extend .grid-parent
+  top: 10.75rem
+  @media #{$iphone}
+    margin: 0 auto
+    width: 100%
+    top: 0
 
 .post
   counter-reset: headings 0
-  // text-shadow: 0 0 1px transparent
+  text-shadow: 0 0 1px transparent
   position: relative
-  padding-top: $g
-  margin-bottom: $g*4
+  margin-bottom: $g*2.15
+  padding-bottom: $g*2.5
+  letter-spacing: 1px
+  word-spacing: -2px
+  color: $grey
+  text-shadow: 0 0 1px rgba($grey, 0.05)
+  @media #{$iphone}
+    margin-bottom: $g*2
   img
     width: 100%
-    max-width: $max-width
     box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.25)
-    border-radius: 3px
+    border-radius: 5px
+    margin-top: $g*0.55
   &:first-child h2:first-child
-    margin-top: $g/2
-
-header, article, aside
-  @extend .grid
-  width: percentage(1/3)
-
-header, aside
-  padding: $g*2 $g*1.45
-  position: relative
-  div
-    position: absolute
-    span
-      position: fixed 
-      color: #ccc
+    margin-top: 0
 
 article
-  &.update
-    text-align: center
+  @media #{$iphone}
+    width: 100%
+    padding: $g
 
+header
+  width: 100%
+  position: relative
+  z-index: 100
+  height: $g*6
+  background-color: rgba(#fdfdfd, 0.95)
+  background-repeat: all
+  border-bottom: 1px solid rgba(lighten(#abbed6, 20%), 0.3)
+  position: fixed 
+  padding: $g 0
+  // box-shadow: 0 2px 6px -3px rgba(#aaa, 0.075)
+  @media #{$iphone}
+    padding: $g/2 $g
+    position: relative
+    height: $g*3.25
+  div
+    width: em(466)
+    margin: 0 auto
+    position: relative
+    top: $g
+    @media #{$iphone}
+      width: 100%
+      top: $g/2
+  h2
+    display: inline-block
+    font-weight: normal
+    margin: 0
+    position: relative
+    top: -0.8em
+    left: $g
+    color: darken($grey, 10%)
+    @media #{$iphone}
+      left: 0
+      top: 0
+    span
+      font-weight: normal
+      color: lighten($grey, 30%)
+      font-family: $thin
+  img
+    border-radius: 8px
+    width: 40px
+    display: inline-block
+    border: 2px solid white
+    box-shadow: 0 0 3px rgba(#aaa, 0.5)
+    @media #{$iphone}
+      display: none
